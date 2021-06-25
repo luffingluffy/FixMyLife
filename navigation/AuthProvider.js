@@ -14,14 +14,14 @@ export const AuthProvider = ({children}) => {
                     try {
                         await auth().signInWithEmailAndPassword(email, password);
                     } catch(e) {
-                        console.log(e);
+                        alert(e);
                     }
                 },
                 register: async (email, password) => {
                     try {
                         await auth().createUserWithEmailAndPassword(email, password);
                     } catch (e) {
-                        console.log(e);
+                        alert(e);
                     }
                 },
                 logout: async () => {

@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, Alert} from 'react-native';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 import SocialButton from '../components/SocialButton';
@@ -42,7 +42,14 @@ const SignupScreen = ({navigation}) => {
             />
             <FormButton
                 buttonTitle="Sign Up"
-                onPress = {() => register(email, password)}
+                onPress ={() => {
+                    if (password === confirmPassword) {
+                        register(email, password)
+                    } else {
+                        Alert.alert("Error", "Passwords do not match")
+                    }
+                }}
+
             />
             <View style={styles.textPrivate}>
                 <Text style={styles.color_textPrivate}>

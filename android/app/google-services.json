@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "586822168426",
+    "project_id": "fixmylife-16bf7",
+    "storage_bucket": "fixmylife-16bf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586822168426:android:0f8a63a101bfaa94fcff13",
+        "android_client_info": {
+          "package_name": "com.fixmylife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586822168426-92i2jqokbi2ir0f0i93lmnsojf3bf8pp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA58gz0QdaYQpir33l7AGhJNnB35jYZ01A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586822168426-92i2jqokbi2ir0f0i93lmnsojf3bf8pp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "586822168426-7jbif8rofesknc54r9gvbuvmkef3ei5c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fixmylife"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
