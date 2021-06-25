@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, ImageBackground} from 'react-native';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 import SocialButton from '../components/SocialButton';
@@ -11,55 +11,57 @@ const LoginScreen = ({navigation}) => {
     const {login} = useContext(AuthContext);
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>
-                FixMyLife
-            </Text>
-            <FormInput
-                labelValue={email}
-                onChangeText={(userEmail) => setEmail(userEmail)}
-                placeholderText="Email"
-                iconType='user'
-                keyboardType="email-address"
-                autoCapitalize="none"
-                autoCorrect={false}
-            />
-            <FormInput
-                labelValue={password}
-                onChangeText={(userPassword) => setPassword(userPassword)}
-                placeholderText="Password"
-                iconType='lock'
-                secureTextEntry={true}
-            />
-            <FormButton
-                buttonTitle="Sign In"
-                onPress = {() => login(email, password)}
-            />
-            <TouchableOpacity style={styles.forgotButton} onPress={() => alert("Todo")}>
-                <Text style={styles.navButtonText}>
-                    Forgot Password?
+        <ImageBackground source={require('../assets/17255402.jpg')} style={{height: '100%', width: '100%'}}>
+            <View style={styles.container}>
+                <Text style={styles.text}>
+                    FixMyLife
                 </Text>
-            </TouchableOpacity>
-            <SocialButton
-                buttonTitle="Sign In with Google"
-                btnType="google"
-                color='#de4d41'
-                backgroundColor='#f5e7ea'
-                onPress={() =>{}}
-            />
-            <SocialButton
-                buttonTitle="Sign In with Facebook"
-                btnType="facebook"
-                color='#4867aa'
-                backgroundColor='#e6eaf4'
-                onPress={() =>{}}
-            />
-            <TouchableOpacity style={styles.forgotButton} onPress={() => navigation.navigate('Signup')}>
-                <Text style={styles.navButtonText}>
-                    Don't have an account? Create Here!
-                </Text>
-            </TouchableOpacity>
-        </View>
+                <FormInput
+                    labelValue={email}
+                    onChangeText={(userEmail) => setEmail(userEmail)}
+                    placeholderText="Email"
+                    iconType='user'
+                    keyboardType="email-address"
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                />
+                <FormInput
+                    labelValue={password}
+                    onChangeText={(userPassword) => setPassword(userPassword)}
+                    placeholderText="Password"
+                    iconType='lock'
+                    secureTextEntry={true}
+                />
+                <FormButton
+                    buttonTitle="Sign In"
+                    onPress = {() => login(email, password)}
+                />
+                <TouchableOpacity style={styles.forgotButton} onPress={() => alert("Todo")}>
+                    <Text style={styles.navButtonText}>
+                        Forgot Password?
+                    </Text>
+                </TouchableOpacity>
+                <SocialButton
+                    buttonTitle="Sign In with Google"
+                    btnType="google"
+                    color='#de4d41'
+                    backgroundColor='#f5e7ea'
+                    onPress={() =>{}}
+                />
+                <SocialButton
+                    buttonTitle="Sign In with Facebook"
+                    btnType="facebook"
+                    color='#4867aa'
+                    backgroundColor='#e6eaf4'
+                    onPress={() =>{}}
+                />
+                <TouchableOpacity style={styles.forgotButton} onPress={() => navigation.navigate('Signup')}>
+                    <Text style={styles.navButtonText}>
+                        Don't have an account? Create here
+                    </Text>
+                </TouchableOpacity>
+            </View>
+        </ImageBackground>
     );
 };
 
@@ -78,11 +80,11 @@ const styles = StyleSheet.create({
         resizeMode: 'cover',
     },
     text: {
-        fontFamily: 'Kufam-SemiBoldItalic',
-        fontSize: 60,
+        fontFamily: 'HeadlinerNo.45',
+        fontSize: 120,
         paddingTop: 50,
         marginBottom: 40,
-        color: '#051d5f',
+        color: '#f0f8ff',
     },
     navButton: {
         marginTop: 15,
@@ -93,7 +95,7 @@ const styles = StyleSheet.create({
     navButtonText: {
         fontSize: 18,
         fontWeight: '500',
-        color: '#2e64e5',
+        color: '#f0f8ff',
         fontFamily: 'Lato-Regular',
     },
 });
