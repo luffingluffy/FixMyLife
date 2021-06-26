@@ -14,7 +14,7 @@ const SignupScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>
-                Create An Account
+                Sign Up
             </Text>
             <FormInput
                 labelValue={email}
@@ -40,7 +40,7 @@ const SignupScreen = ({navigation}) => {
                 secureTextEntry={true}
             />
             <FormButton
-                buttonTitle="Sign Up"
+                buttonTitle="Continue"
                 onPress ={() => {
                     if (password === confirmPassword) {
                         register(email, password)
@@ -70,8 +70,9 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     text: {
-        fontFamily: 'Kufam-SemiBoldItalic',
-        fontSize: 35,
+        fontFamily: 'Lato-Bold',
+        fontSize: 60,
+        marginTop: 75,
         marginBottom: 40,
         color: '#051d5f',
     },
