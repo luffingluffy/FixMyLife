@@ -33,26 +33,26 @@ const LoginScreen = ({navigation}) => {
                     secureTextEntry={true}
                 />
                 <FormButton
-                    buttonTitle="Sign In"
+                    buttonTitle="Log In"
                     onPress = {() => login(email, password)}
                 />
-                <TouchableOpacity style={styles.forgotButton} onPress={() => alert("Todo")}>
+                <TouchableOpacity style={styles.forgotButton} onPress={() => {}}>
                     <Text style={styles.navButtonText}>
                         Forgot Password?
                     </Text>
                 </TouchableOpacity>
                 <SocialButton
-                    buttonTitle="Sign In with Google"
+                    buttonTitle="Continue with Google"
                     btnType="google"
                     color='#de4d41'
                     backgroundColor='#f5e7ea'
                     onPress={() =>{}}
                 />
                 <SocialButton
-                    buttonTitle="Sign In with Facebook"
-                    btnType="facebook"
-                    color='#4867aa'
-                    backgroundColor='#e6eaf4'
+                    buttonTitle="Continue with Apple"
+                    btnType="apple"
+                    color='#000000'
+                    backgroundColor='#f0f8ff'
                     onPress={() =>{}}
                 />
                 <TouchableOpacity style={styles.forgotButton} onPress={() => navigation.navigate('Signup')}>
