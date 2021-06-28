@@ -12,6 +12,7 @@ import {
 import {AuthContext} from '../navigation/AuthProvider';
 import Task from '../components/Tasks';
 
+
 const HomeScreen = () => {
     const [task, setTask] = useState();
     const [taskItems, setTaskItems] = useState([]);

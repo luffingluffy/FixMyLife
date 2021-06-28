@@ -60,12 +60,6 @@ const OnboardingScreen = ({navigation}) => {
                   title: 'Welcome to FixMyLife!',
                   subtitle: 'Are You Ready to Change Your Life?',
               },
-              {
-                  backgroundColor: '#fdeb93',
-                  image: <Image source={require('../assets/onboarding-img2.png')}/>,
-                  title: 'Onboarding 2',
-                  subtitle: 'Done with React Native Onboarding Swiper',
-              },
           ]}
       />
   );
