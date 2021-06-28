@@ -2,7 +2,7 @@
 
 Proposal for Orbital 2021  
 Team Name: FixMyLife  
-Proposed Level of Achievement: Artemis  
+Proposed Level of Achievement: Artemis
 
 <h2>Motivation</h2>
 
@@ -44,14 +44,9 @@ Backend features:
 <h2>Timeline</h2>  
 
 1. Evaluation Milestone 1 (31 May 2021)
-    * To implement a login screen
+    * To implement a login screen with Firebase
  
 2. Evaluation Milestone 2 (28 Jun 2021)
-    * To implement progress system
-         1. EXP and Gold system
-         2. RPG character elements
-         3. Progress Log (to show an overview of what you have done for the month/week)
-         4. Customizability (app + character avatar customizability)
      * Skeletal gameplay elements
          1. Character Stats (Attack, Defense, HP etc)
          2. HP & MP (Resources for battles)
@@ -63,20 +58,26 @@ Backend features:
          2. Formatting of features
          3. To add items to todo list
          4. To remove items from todo list
-         5. Sorting by priority/time
-         6.  Filter by categories 
-         7.  Reminders  
 
-3. Evaluation Milestone 3 (26 Jul 2021)  
+3. Evaluation Milestone 3 (26 Jul 2021)     
+      * To implement addition to do list features
+         1. Sorting by priority/time 
+         2. Filter by categories 
+         3. Reminders
+
+      * To implement progress system
+         1. EXP and Gold system
+         2. RPG character elements
+         3. Progress Log (to show an overview of what you have done for the month/week)
+         4. Customizability (app + character avatar customizability)
+
      * Design and Aesthetics
          1. Character Sprite work (likely 8-bit style)
          2. Design Consistency
          3. Music and sound design
+
      * Backend development
          1. Synchronization of progress across devices
          2. Leaderboard system
          3. Friend system
-     * Gameplay elements
-         1. Monsters (linear progression ie: a quest system of monster battles that eventually leads to a boss battle)
-         2. Boss Battles (harder and riskier fights with greater rewards)
-         3. Party System (enable users to motivate one another to stay on task)
+         4. Party System (enable users to motivate one another to stay on task)
