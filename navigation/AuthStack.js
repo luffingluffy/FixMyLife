@@ -45,11 +45,11 @@ const AuthStack = () => {
         component={LoginScreen}
         options={{header: () => null}}
       />
-        <Stack.Screen
-            name="Signup"
-            component={SignupScreen}
-            options={{header: () => null}}
-        />
+      <Stack.Screen
+        name="Signup"
+        component={SignupScreen}
+        options={{header: () => null}}
+      />
     </Stack.Navigator>
   );
 };
