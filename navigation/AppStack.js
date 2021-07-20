@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import HomeScreen from '../screens/HomeScreen';
+import TaskScreen from '../screens/TaskScreen';
 
 const Stack = createStackNavigator();
 
@@ -9,7 +9,7 @@ const AppStack = () => {
     <Stack.Navigator>
       <Stack.Screen
         name="Home"
-        component={HomeScreen}
+        component={TaskScreen}
         options={{
           title: 'FixMyLife',
           headerStyle: {

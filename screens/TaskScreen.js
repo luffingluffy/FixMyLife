@@ -13,14 +13,16 @@ import {
 import {AuthContext} from '../navigation/AuthProvider';
 import Task from '../components/Tasks';
 
-const HomeScreen = () => {
+const TaskScreen = () => {
   const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
-    Keyboard.dismiss();
-    setTaskItems([...taskItems, task]);
-    setTask(null);
+    if (task != null) {
+      Keyboard.dismiss();
+      setTaskItems([...taskItems, task]);
+      setTask(null);
+    }
   };
 
   const completeTask = index => {
@@ -73,7 +75,7 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default TaskScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -110,9 +112,9 @@ const styles = StyleSheet.create({
     width: 260,
   },
   addWrapper: {
-    width: 60,
-    height: 60,
-    backgroundColor: '#FFF',
+    width: 55,
+    height: 55,
+    backgroundColor: '#000743',
     borderRadius: 60,
     justifyContent: 'center',
     alignItems: 'center',
@@ -120,5 +122,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginHorizontal: 30,
   },
-  addText: {},
+  addText: {
+    fontSize: 28,
+    color: '#FFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
