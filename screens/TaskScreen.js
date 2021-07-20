@@ -18,8 +18,8 @@ const TaskScreen = () => {
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
+    Keyboard.dismiss();
     if (task != null) {
-      Keyboard.dismiss();
       setTaskItems([...taskItems, task]);
       setTask(null);
     }
@@ -56,14 +56,15 @@ const TaskScreen = () => {
       </ScrollView>
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        style={styles.writeTaskWrapper}>
+        style={styles.writeTaskWrapper}
+        keyboardVerticalOffset={Platform.select({ios: 100, android: 500})}>
         <TextInput
           style={styles.input}
           placeholder={'Write a task'}
           value={task}
           onChangeText={text => setTask(text)}
-          autoCapitalize="none"
           autoCorrect={false}
+          autoCapitalize="sentences"
         />
         <TouchableOpacity onPress={() => handleAddTask()}>
           <View style={styles.addWrapper}>
@@ -96,10 +97,9 @@ const styles = StyleSheet.create({
   writeTaskWrapper: {
     position: 'absolute',
     bottom: 60,
-    left: 15,
+    left: 20,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-around',
     alignItems: 'center',
   },
   input: {
