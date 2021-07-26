@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
+import {AuthContext} from '../navigation/AuthProvider';
 
 const CharacterScreen = ({navigation}) => {
+  const {logout} = useContext(AuthContext);
   return (
     <View style={styles.container}>
       <Text>CharacterScreen</Text>
-      <Button title="Click Here" onPress={() => alert('Button clicked')} />
+      <Button title="Logout" onPress={() => logout()} />
     </View>
   );
 };

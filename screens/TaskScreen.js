@@ -90,13 +90,14 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 35,
     fontWeight: 'bold',
+    marginTop: 30,
   },
   items: {
     marginTop: 30,
   },
   writeTaskWrapper: {
     position: 'absolute',
-    bottom: 60,
+    bottom: 20,
     left: 20,
     width: '100%',
     flexDirection: 'row',
