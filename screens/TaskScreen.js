@@ -9,8 +9,9 @@ import {
   KeyboardAvoidingView,
   Platform,
   TextInput,
+  Button,
 } from 'react-native';
-import {AuthContext} from '../navigation/AuthProvider';
+
 import Task from '../components/Tasks';
 
 const TaskScreen = () => {
@@ -31,7 +32,6 @@ const TaskScreen = () => {
     setTaskItems(itemsCopy);
   };
 
-  const {user, logout} = useContext(AuthContext);
   return (
     <View style={styles.container}>
       <ScrollView
@@ -42,6 +42,9 @@ const TaskScreen = () => {
         <View style={styles.tasksWrapper}>
           <Text style={styles.sectionTitle}>Tasks</Text>
           <View style={styles.items}>
+            <TouchableOpacity onPress={() => cycleSort} color="#000743">
+              <Text style={styles.sortButton}>Sort By: Date</Text>
+            </TouchableOpacity>
             {taskItems.map((item, index) => {
               return (
                 <TouchableOpacity
@@ -128,5 +131,11 @@ const styles = StyleSheet.create({
     color: '#FFF',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  sortButton: {
+    position: 'absolute',
+    top: -30,
+    right: 10,
+    fontSize: 16,
   },
 });

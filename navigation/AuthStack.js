@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import OnboardingScreen from '../screens/OnboardingScreen';
 import LoginScreen from '../screens/LoginScreen';
 import SignupScreen from '../screens/SignupScreen';
+import ForgotPasswordScreen from '../screens/ForgotPasswordScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {View} from 'react-native';
 
@@ -48,6 +49,11 @@ const AuthStack = () => {
       <Stack.Screen
         name="Signup"
         component={SignupScreen}
+        options={{header: () => null}}
+      />
+      <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPasswordScreen}
         options={{header: () => null}}
       />
     </Stack.Navigator>

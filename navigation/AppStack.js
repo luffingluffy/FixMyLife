@@ -50,7 +50,7 @@ const AppStack = () => {
         name="Character Screen"
         component={CharacterScreen}
         options={({route}) => ({
-          tabBarLabel: 'Char',
+          tabBarLabel: 'Character',
           // tabBarVisible: route.state && route.state.index === 0,
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons
