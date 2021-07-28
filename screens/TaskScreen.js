@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 
 import Task from '../components/Tasks';
+import TaskList from '../components/TaskList';
 
 const TaskScreen = () => {
   const [task, setTask] = useState();
