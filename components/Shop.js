@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import ShopItem from './shop-item';
-import shopItems from './shop-items';
-import ViewItem from '../view-item';
-import uuidv4 from '../../utils/uuid-v4';
 import {MAX_ITEMS_UPGRADE} from '../../config/constants';
 
 import './styles.scss';
